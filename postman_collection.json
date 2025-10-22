@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Backend PST 3 API",
+    "_postman_id": "backend-pst-3-collection",
+    "description": "Colección Postman generada automáticamente con las rutas detectadas en el proyecto.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login (recomendado POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"usuario\": \"admin\", \"contraseña\": \"secret\"}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api","auth","login"] }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        { "name": "GET /api/usuarios", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/usuarios", "path": ["api","usuarios"] }, "header": [] }, "response": [] },
+        { "name": "GET /api/usuarios/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/usuarios/:id", "path": ["api","usuarios",":id"] } }, "response": [] },
+        { "name": "POST /api/usuarios (crear/actualizar)", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{token}}" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"usuario\":\"ejemplo\"}" }, "url": { "raw": "{{baseUrl}}/api/usuarios", "path": ["api","usuarios"] } }, "response": [] },
+        { "name": "DELETE /api/usuarios", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{token}}" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/usuarios", "path": ["api","usuarios"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Empleados",
+      "item": [
+        { "name": "GET /api/empleados", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/empleados", "path": ["api","empleados"] } }, "response": [] },
+        { "name": "GET /api/empleados/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/empleados/:id", "path": ["api","empleados",":id"] } }, "response": [] },
+        { "name": "POST /api/empleados", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Juan\",\"apellido\":\"Perez\"}" }, "url": { "raw": "{{baseUrl}}/api/empleados", "path": ["api","empleados"] } }, "response": [] },
+        { "name": "DELETE /api/empleados", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/empleados", "path": ["api","empleados"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Representantes",
+      "item": [
+        { "name": "GET /api/representantes", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/representantes", "path": ["api","representantes"] } }, "response": [] },
+        { "name": "GET /api/representantes/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/representantes/:id", "path": ["api","representantes",":id"] } }, "response": [] },
+        { "name": "POST /api/representantes", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Ana\"}" }, "url": { "raw": "{{baseUrl}}/api/representantes", "path": ["api","representantes"] } }, "response": [] },
+        { "name": "DELETE /api/representantes", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/representantes", "path": ["api","representantes"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Alumnos",
+      "item": [
+        { "name": "GET /api/alumnos", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/alumnos", "path": ["api","alumnos"] } }, "response": [] },
+        { "name": "GET /api/alumnos/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/alumnos/:id", "path": ["api","alumnos",":id"] } }, "response": [] },
+        { "name": "POST /api/alumnos", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Pedro\"}" }, "url": { "raw": "{{baseUrl}}/api/alumnos", "path": ["api","alumnos"] } }, "response": [] },
+        { "name": "DELETE /api/alumnos", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/alumnos", "path": ["api","alumnos"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Transacciones",
+      "item": [
+        { "name": "GET /api/transacciones", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/transacciones", "path": ["api","transacciones"] } }, "response": [] },
+        { "name": "GET /api/transacciones/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/transacciones/:id", "path": ["api","transacciones",":id"] } }, "response": [] },
+        { "name": "POST /api/transacciones", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"monto\":100}" }, "url": { "raw": "{{baseUrl}}/api/transacciones", "path": ["api","transacciones"] } }, "response": [] },
+        { "name": "DELETE /api/transacciones", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/transacciones", "path": ["api","transacciones"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Conceptos",
+      "item": [
+        { "name": "GET /api/conceptos", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/conceptos", "path": ["api","conceptos"] } }, "response": [] },
+        { "name": "GET /api/conceptos/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/conceptos/:id", "path": ["api","conceptos",":id"] } }, "response": [] },
+        { "name": "POST /api/conceptos", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"descripcion\":\"Cuota\"}" }, "url": { "raw": "{{baseUrl}}/api/conceptos", "path": ["api","conceptos"] } }, "response": [] },
+        { "name": "DELETE /api/conceptos", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/conceptos", "path": ["api","conceptos"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Niveles",
+      "item": [
+        { "name": "GET /api/niveles", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/niveles", "path": ["api","niveles"] } }, "response": [] },
+        { "name": "GET /api/niveles/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/niveles/:id", "path": ["api","niveles",":id"] } }, "response": [] },
+        { "name": "POST /api/niveles", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Inicial\"}" }, "url": { "raw": "{{baseUrl}}/api/niveles", "path": ["api","niveles"] } }, "response": [] },
+        { "name": "DELETE /api/niveles", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/niveles", "path": ["api","niveles"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Personas",
+      "item": [
+        { "name": "GET /api/personas", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/personas", "path": ["api","personas"] } }, "response": [] },
+        { "name": "GET /api/personas/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/personas/:id", "path": ["api","personas",":id"] } }, "response": [] },
+        { "name": "POST /api/personas", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Carlos\"}" }, "url": { "raw": "{{baseUrl}}/api/personas", "path": ["api","personas"] } }, "response": [] },
+        { "name": "DELETE /api/personas", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/personas", "path": ["api","personas"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Divisas",
+      "item": [
+        { "name": "GET /api/divisas", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/divisas", "path": ["api","divisas"] } }, "response": [] },
+        { "name": "GET /api/divisas/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/divisas/:id", "path": ["api","divisas",":id"] } }, "response": [] },
+        { "name": "POST /api/divisas", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"codigo\":\"USD\",\"valor\":1}" }, "url": { "raw": "{{baseUrl}}/api/divisas", "path": ["api","divisas"] } }, "response": [] },
+        { "name": "DELETE /api/divisas", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/divisas", "path": ["api","divisas"] } }, "response": [] }
+      ]
+    },
+    {
+      "name": "Perfil",
+      "item": [
+        { "name": "GET /api/perfil", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/perfil", "path": ["api","perfil"] } }, "response": [] },
+        { "name": "GET /api/perfil/:id", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/perfil/:id", "path": ["api","perfil",":id"] } }, "response": [] },
+        { "name": "POST /api/perfil", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":0,\"nombre\":\"Admin\"}" }, "url": { "raw": "{{baseUrl}}/api/perfil", "path": ["api","perfil"] } }, "response": [] },
+        { "name": "DELETE /api/perfil", "request": { "method": "DELETE", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"id\":123}" }, "url": { "raw": "{{baseUrl}}/api/perfil", "path": ["api","perfil"] } }, "response": [] }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:4000" },
+    { "key": "token", "value": "" }
+  ]
+}
