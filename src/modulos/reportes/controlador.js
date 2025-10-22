@@ -3,7 +3,7 @@ const db = require('../../DB/mysql')
 module.exports = function (dbInyectada) {
   const _db = dbInyectada || db;
 
-  async function representantesConAlumnos() {
+  async function representantesConAlumnos(limit = 20, offset = 0) {
     const sql = `
       SELECT
         A.id AS alumno_id,

@@ -88,6 +88,7 @@ Módulos detectados y sus prefijos montados en `src/app.js`:
 - `/api/divisas`       — `src/modulos/divisas/rutas.js`
 - `/api/perfil`        — `src/modulos/perfil/rutas.js`
 - `/api/auth`          — `src/modulos/auth/rutas.js`
+- `/api/reportes`      — `src/modulos/reportes/rutas.js`
 
 
 
@@ -140,9 +141,9 @@ Paginación del endpoint de reportes
 El endpoint de reportes soporta paginación para evitar cargar todos los datos en memoria.
 
 - GET `/api/reportes/representantes-alumnos` — devuelve todos 
-- GET `/api/reportes/representantes-alumnos?page=1&limit=50` — devuelve la página 1 con 50 representantes por página. Para cada página el servidor:
+- GET `/api/reportes/representantes-alumnos?page=1&limit=20` — devuelve la página 1 con 20 representantes por página. Para cada página el servidor:
 	1. trae los representantes de la página (LIMIT/OFFSET),
-	2. trae los alumnos que referencian a esos representantes (filtrando por columnas comunes como `representante_1`, `representante_2`),
+	2. trae los alumnos que referencian a esos representantes (filtrando por columnas comunes como `representante_1`),
 	3. trae las filas de `persona` necesarias para enriquecer los registros.
 
 Ejemplo:
@@ -152,4 +153,9 @@ curl -s "http://localhost:4000/api/reportes/representantes-alumnos?page=1&limit=
 ```
 
 
+Uso de Postman
+----------------------
+En la raiz de proyecto, estan las colecciones de postman, que pueden importar
+para acceder a las diferentes rutas.
 
+postman_collection
